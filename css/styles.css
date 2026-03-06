@@ -248,3 +248,47 @@ footer {
   margin-bottom: 15px;
   color: #555;
 }
+/* RECENT SHANTIES */
+
+.recent {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.recent h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.recent-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.recent-card {
+  width: 170px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.recent-card:hover {
+  transform: translateY(-5px);
+}
+
+.recent-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.recent-card p {
+  font-size: 14px;
+  margin: 0;
+}
