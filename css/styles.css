@@ -1,19 +1,26 @@
+/* Global Styles */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #f5f5f5;
   color: #222;
   text-align: center;
+  line-height: 1.6;
 }
+
+/* Container */
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
+
+/* Header */
 
 .site-header {
   background: #0b3d4f;
@@ -22,6 +29,7 @@ body {
 
 .logo {
   margin: 0;
+  font-size: 26px;
 }
 
 nav a {
@@ -31,37 +39,74 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* HERO SECTION */
+
 .hero {
-  background: #e8f3f7;
-  padding: 100px 20px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/images/hero.jpg");
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  padding: 160px 20px;
+
+  color: white;
+}
+
+/* Hero Content */
+
+.hero-content {
+  max-width: 650px;
+  margin-left: 10%;
+  text-align: left;
 }
 
 .hero h2 {
-  font-size: 42px;
-  max-width: 700px;
-  margin: auto;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: 20px auto;
-  font-size: 18px;
+  font-size: 20px;
+  max-width: 550px;
 }
+
+/* CTA Button */
 
 .hero-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
+  margin-top: 30px;
+  padding: 16px 34px;
   background: #c48a2c;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
 }
+
+.hero-button:hover {
+  background: #a87420;
+}
+
+/* HOW IT WORKS */
 
 .how {
   padding: 80px 20px;
   background: white;
+}
+
+.how h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
 .steps {
@@ -76,19 +121,34 @@ nav a {
 }
 
 .step h3 {
-  font-size: 36px;
+  font-size: 40px;
   color: #0b3d4f;
+  margin-bottom: 10px;
 }
+
+/* FEATURED SHANTY */
 
 .featured {
   padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.featured h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
 }
 
 .featured img {
   max-width: 320px;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
+
+audio {
+  margin-top: 10px;
+}
+
+/* CTA SECTION */
 
 .cta {
   background: #0b3d4f;
@@ -96,8 +156,47 @@ nav a {
   padding: 80px 20px;
 }
 
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* FOOTER */
+
 footer {
   background: #222;
   color: white;
   padding: 20px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .hero {
+    background-position: center;
+    padding: 120px 20px;
+  }
+
+  .hero-content {
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  nav {
+    display: none;
+  }
 }
