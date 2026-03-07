@@ -1,303 +1,331 @@
-/* Global Styles */
+/* =========================
+GENERAL
+========================= */
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5f5;
+  margin: 0;
+  background: #f5f6f7;
   color: #222;
-  text-align: center;
   line-height: 1.6;
 }
 
-/* Container */
+/* =========================
+HEADER
+========================= */
 
-.container {
+.site-header {
+  background: #0b2530;
+  color: #ffffff;
+  padding: 18px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.site-header .container {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Header */
-
-.site-header {
-  background: #0b3d4f;
-  color: white;
+  padding: 0 20px;
 }
 
 .logo {
   margin: 0;
-  font-size: 26px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 22px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  opacity: 0.8;
+  opacity: 1;
+  text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* =========================
+HERO SECTION (IMPROVED)
+========================= */
 
 .hero {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../assets/images/hero.jpg");
-
+  background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: right center;
-  background-repeat: no-repeat;
-
-  padding: 160px 20px;
-
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   color: white;
+  position: relative;
+  padding-left: 8%;
 }
 
-/* Hero Content */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.65) 35%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
 
 .hero-content {
-  max-width: 650px;
-  margin-left: 10%;
-  text-align: left;
+  position: relative;
+  max-width: 520px;
+  z-index: 2;
 }
 
 .hero h2 {
-  font-size: 52px;
-  line-height: 1.2;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 20px;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
 }
 
 .hero p {
-  font-size: 20px;
-  max-width: 550px;
+  font-size: 19px;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
 }
-
-/* CTA Button */
 
 .hero-button {
   display: inline-block;
-  margin-top: 30px;
-  padding: 16px 34px;
-  background: #c48a2c;
+  background: #d39b36;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 18px 34px;
   border-radius: 8px;
-  font-size: 18px;
-  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.25s;
 }
 
 .hero-button:hover {
-  background: #a87420;
+  background: #e0a645;
+  transform: translateY(-2px);
 }
 
-/* HOW IT WORKS */
+/* =========================
+QUEUE STATUS
+========================= */
+
+.queue-status {
+  text-align: center;
+  padding: 15px;
+  background: #fff3d6;
+  font-weight: bold;
+}
+
+/* =========================
+HOW IT WORKS
+========================= */
 
 .how {
-  padding: 80px 20px;
-  background: white;
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
 }
 
 .how h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
+  font-size: 34px;
 }
 
 .steps {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
-  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .step {
-  max-width: 250px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .step h3 {
-  font-size: 40px;
-  color: #0b3d4f;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
-/* FEATURED SHANTY */
-
-.featured {
-  padding: 80px 20px;
-  background: #f5f5f5;
-}
-
-.featured h2 {
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.featured img {
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-audio {
-  margin-top: 10px;
-}
-
-/* CTA SECTION */
-
-.cta {
-  background: #0b3d4f;
-  color: white;
-  padding: 80px 20px;
-}
-
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.cta p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #222;
-  color: white;
-  padding: 20px;
-  font-size: 14px;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .hero {
-    background-position: center;
-    padding: 120px 20px;
-  }
-
-  .hero-content {
-    margin: auto;
-    text-align: center;
-  }
-
-  .hero h2 {
-    font-size: 38px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  nav {
-    display: none;
-  }
-}
-/* EXAMPLE SHANTIES */
+/* =========================
+FEATURED SHANTIES
+========================= */
 
 .examples {
-  padding: 90px 20px;
-  background: white;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .examples h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  font-size: 34px;
 }
 
-.example-grid {
+.examples-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
-  max-width: 1100px;
-  margin: auto;
 }
 
+/* SHANTY CARD */
+
 .example-card {
-  background: #f5f5f5;
+  background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
 .example-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-.example-card img {
+/* ALBUM COVER */
+
+.album-cover {
+  position: relative;
   width: 100%;
-  border-radius: 8px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
   margin-bottom: 15px;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.album-cover:hover img {
+  transform: scale(1.06);
+}
+
+/* PLAY OVERLAY */
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.album-cover:hover .play-overlay {
+  opacity: 1;
 }
 
 .example-card h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-top: 10px;
 }
 
 .example-card p {
-  font-size: 15px;
-  margin-bottom: 15px;
   color: #555;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
-/* RECENT SHANTIES */
+
+.example-card audio {
+  width: 100%;
+}
+
+/* =========================
+RECENT SHANTIES
+========================= */
 
 .recent {
+  background: white;
   padding: 80px 20px;
-  background: #f5f5f5;
+  text-align: center;
 }
 
 .recent h2 {
   font-size: 34px;
-  margin-bottom: 40px;
 }
 
 .recent-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-}
-
-.recent-card {
-  width: 170px;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.recent-card:hover {
-  transform: translateY(-5px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .recent-card img {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .recent-card p {
   font-size: 14px;
-  margin: 0;
 }
-/* ORDER QUEUE STATUS */
 
-.queue-status {
-  background: #c48a2c;
+/* =========================
+CALL TO ACTION
+========================= */
+
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0f2c3a;
   color: white;
-  padding: 14px 10px;
-  font-size: 16px;
-  font-weight: bold;
+}
+
+.cta h2 {
+  font-size: 36px;
+}
+
+.cta p {
+  font-size: 18px;
+}
+
+.cta a {
+  margin-top: 20px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: #aaa;
+  font-size: 14px;
 }
