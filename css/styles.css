@@ -366,7 +366,7 @@ ORDER PAGE HERO
 .order-hero {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("assets/images/hero-order.jpg");
+    url("../assets/images/hero-order.jpg");
 
   background-size: cover;
   background-position: center;
