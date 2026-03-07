@@ -1,466 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hear the Shanties | The Shanty Shack</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+
+<style>
+
 /* =========================
-GENERAL
+SHANTY GALLERY
 ========================= */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background: #f5f6f7;
-  color: #222;
-  line-height: 1.6;
+.shanty-gallery{
+padding:80px 20px;
+background:#f5f6f7;
 }
 
+.shanty-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+}
+
+/* CARD */
+
+.shanty-card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.shanty-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* COVER */
+
+.cover{
+position:relative;
+}
+
+.cover img{
+width:100%;
+display:block;
+}
+
+/* PLAY BUTTON */
+
+.play-btn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:65px;
+height:65px;
+border-radius:50%;
+border:none;
+background:rgba(15,44,58,0.9);
+color:white;
+font-size:24px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.play-btn:hover{
+background:#d39b36;
+}
+
+/* CARD CONTENT */
+
+.card-content{
+padding:18px;
+text-align:center;
+}
+
+.card-content h3{
+margin:0 0 6px 0;
+font-size:18px;
+}
+
+.card-content p{
+font-size:14px;
+color:#555;
+margin-bottom:12px;
+}
+
+/* STYLE BUTTON */
+
+.style-btn{
+display:inline-block;
+background:#0f2c3a;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
+}
+
+.style-btn:hover{
+background:#d39b36;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+<div class="container">
+
+<div class="logo-area">
+<img src="assets/images/logo.jpg" alt="The Shanty Shack logo">
+<span>The Shanty Shack</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="examples.html">Hear the Shanties</a>
+<a href="order.html">Order a Shanty</a>
+<a href="about.html">About</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="order-hero">
+
+<div class="container">
+
+<h1>Hear the Shanties</h1>
+
+<p>
+Every pet has a legend worth singing.
+Browse a few of the shanty styles you can commission for your own four-legged sailor.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- SHANTY GRID -->
+
+<section class="shanty-gallery">
+
+<div class="shanty-grid">
+
+
+<!-- 1 CAPSTAN -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/capstan.jpg">
+
+<button class="play-btn" onclick="togglePlay('capstan')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Capstan Shanty — 112 BPM</h3>
+
+<p>
+Steady work-song rhythm with powerful harmony refrains and a strong downbeat.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="capstan">
+<source src="audio/capstan-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- 2 FOREBITTER -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/forebitter.jpg">
+
+<button class="play-btn" onclick="togglePlay('forebitter')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Forebitter Ballad — 75 BPM</h3>
+
+<p>
+A slower lyrical storytelling style with rich harmony and emotional delivery.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="forebitter">
+<source src="audio/forebitter-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+
+<!-- 3 HALYARD -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/halyard.jpg">
+
+<button class="play-btn" onclick="togglePlay('halyard')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Halyard Haul — 112 BPM</h3>
+
+<p>
+Punchy call-and-response shanty with snappy rhythm and short vocal phrases.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="halyard">
+<source src="audio/halyard-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+
+<!-- 4 MODERN ANTHEM -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/anthem.jpg">
+
+<button class="play-btn" onclick="togglePlay('anthem')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Modern Sea Anthem — 92 BPM</h3>
+
+<p>
+Traditional folk chords blended with a cinematic build and powerful chorus.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="anthem">
+<source src="audio/anthem-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+
+<!-- 5 DOCKSIDE -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/dockside.jpg">
+
+<button class="play-btn" onclick="togglePlay('dockside')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Dockside Drinking Song — 124 BPM</h3>
+
+<p>
+A jaunty tavern singalong with stomping rhythm and rowdy group vocals.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="dockside">
+<source src="audio/dockside-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+
+<!-- 6 SHANTY PUNK -->
+
+<div class="shanty-card">
+
+<div class="cover">
+
+<img src="assets/images/shantypunk.jpg">
+
+<button class="play-btn" onclick="togglePlay('punk')">▶</button>
+
+</div>
+
+<div class="card-content">
+
+<h3>Shanty-Punk Crossover — 124 BPM</h3>
+
+<p>
+A high-energy fusion of traditional shanty vocals with modern rock drive.
+</p>
+
+<a class="style-btn" href="order.html">Order this style</a>
+
+</div>
+
+<audio id="punk">
+<source src="audio/punk-preview.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="order-reassurance">
+
+<div class="container">
+
+<p>
+Ready to hear your pet's legend sung across the seas?
+</p>
+
+<a href="order.html" class="hero-button">
+⚓ Commission Your Pet's Shanty
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<img src="assets/images/logo.jpg">
+
+<p>© The Shanty Shack</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+function togglePlay(id){
+
+const audio=document.getElementById(id);
+
+document.querySelectorAll("audio").forEach(a=>{
+if(a!==audio){
+a.pause();
+}
+});
+
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
 /* =========================
-HEADER
+LOGO
 ========================= */
 
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+height:36px;
+width:auto;
+display:block;
+}
+
+
+
 /* =========================
-LOGO AREA
+SHANTY GALLERY
 ========================= */
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 20px;
+.shanty-gallery{
+padding:80px 20px;
+background:#f5f6f7;
 }
 
-.logo-area img {
-  height: 42px;
-  width: auto;
+.shanty-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
+
+
+
+/* CARD */
+
+.shanty-card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.shanty-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+
+
+/* COVER IMAGE */
+
+.cover{
+position:relative;
+aspect-ratio:1/1;
+overflow:hidden;
+}
+
+.cover img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+
+
+/* PLAY BUTTON */
+
+.play-btn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:65px;
+height:65px;
+border-radius:50%;
+border:none;
+background:rgba(15,44,58,0.9);
+color:white;
+font-size:24px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.play-btn:hover{
+background:#d39b36;
+}
+
+
+
+/* CARD CONTENT */
+
+.card-content{
+padding:18px;
+text-align:center;
+}
+
+.card-content h3{
+margin:0 0 6px 0;
+font-size:18px;
+}
+
+.card-content p{
+font-size:14px;
+color:#555;
+margin-bottom:12px;
+}
+
+
+
+/* ORDER BUTTON */
+
+.style-btn{
+display:inline-block;
+background:#0f2c3a;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+font-size:14px;
+}
+
+.style-btn:hover{
+background:#d39b36;
+}
+
+
+
+/* FOOTER LOGO */
+
+/* FOOTER */
+
+.site-footer{
+background:#0f2c3a;
+color:white;
+padding:40px 20px;
+margin-top:80px;
+}
+
+.footer-inner{
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+.site-footer img{
+height:40px;
+width:auto;
+display:block;
+margin:0 auto 12px auto;
+}
+
+.site-footer p{
+font-size:14px;
+opacity:0.8;
+}
+/* HEADER */
 
 .site-header {
-  background: #0b2530;
-  color: #ffffff;
-  padding: 18px 0;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+background:#0f2c3a;
+color:white;
+padding:14px 0;
 }
 
-.site-header .container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+.site-header .container{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
 }
 
-.logo {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-nav a {
-  color: white;
-  margin-left: 22px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0.9;
-  transition: 0.2s;
+.logo-area img{
+height:36px;
+width:auto;
+display:block;
 }
 
-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
+.logo-area span{
+font-size:20px;
+font-weight:700;
+letter-spacing:0.5px;
 }
 
-/* =========================
-HERO SECTION (IMPROVED)
-========================= */
-
-.hero {
-  background-image: url("../assets/images/hero.jpg");
-  background-size: cover;
-  background-position: right center;
-  height: 620px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  position: relative;
-  padding-left: 8%;
+.site-header nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.65) 35%,
-    rgba(0, 0, 0, 0.2) 60%,
-    rgba(0, 0, 0, 0) 80%
-  );
-}
-
-.hero-content {
-  position: relative;
-  max-width: 520px;
-  z-index: 2;
-}
-
-.hero h2 {
-  font-size: 54px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
-}
-
-.hero p {
-  font-size: 19px;
-  margin-bottom: 20px;
-  color: #f1f1f1;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-}
-
-.hero-button {
-  display: inline-block;
-  background: #d39b36;
-  color: white;
-  padding: 18px 34px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: 0.25s;
-}
-
-.hero-button:hover {
-  background: #e0a645;
-  transform: translateY(-2px);
-}
-
-/* =========================
-QUEUE STATUS
-========================= */
-
-.queue-status {
-  text-align: center;
-  padding: 15px;
-  background: #fff3d6;
-  font-weight: bold;
-}
-
-/* =========================
-HOW IT WORKS
-========================= */
-
-.how {
-  max-width: 1000px;
-  margin: 80px auto;
-  text-align: center;
-}
-
-.how h2 {
-  font-size: 34px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.step {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.step h3 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* =========================
-FEATURED SHANTIES
-========================= */
-
-.examples {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.examples h2 {
-  margin-bottom: 40px;
-  font-size: 34px;
-}
-
-.examples-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-}
-
-/* SHANTY CARD */
-
-.example-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-}
-
-.example-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* ALBUM COVER */
-
-.album-cover {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.album-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: 0.4s;
-}
-
-.album-cover:hover img {
-  transform: scale(1.06);
-}
-
-/* PLAY OVERLAY */
-
-.play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 26px;
-  background: rgba(0, 0, 0, 0.65);
-  color: white;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.album-cover:hover .play-overlay {
-  opacity: 1;
-}
-
-.example-card h3 {
-  margin-top: 10px;
-}
-
-.example-card p {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.example-card audio {
-  width: 100%;
-}
-
-/* =========================
-RECENT SHANTIES
-========================= */
-
-.recent {
-  background: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.recent h2 {
-  font-size: 34px;
-}
-
-.recent-grid {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.recent-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.recent-card p {
-  font-size: 14px;
-}
-
-/* =========================
-CALL TO ACTION
-========================= */
-
-.cta {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0f2c3a;
-  color: white;
-}
-
-.cta h2 {
-  font-size: 36px;
-}
-
-.cta p {
-  font-size: 18px;
-}
-
-.cta a {
-  margin-top: 20px;
-}
-
-/* =========================
-FOOTER
-========================= */
-
-.site-footer {
-  background: #0f2c3a;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-inner img {
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111;
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* =========================
-ORDER PAGE HERO
-========================= */
-
-.order-hero {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../assets/images/hero-order.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
-  padding: 140px 20px;
-  color: white;
-}
-
-.order-hero h1 {
-  font-size: 46px;
-  margin-bottom: 20px;
-}
-
-.order-hero p {
-  max-width: 750px;
-  margin: auto;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-/* =========================
-WHAT YOU RECEIVE
-========================= */
-
-.what-you-get {
-  padding: 80px 20px;
-  background: white;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-
-.what-you-get ul {
-  list-style: none;
-  padding: 0;
-  max-width: 520px;
-  margin: 40px auto 0;
-}
-
-.what-you-get li {
-  background: #f7f7f7;
-  padding: 18px 22px;
-  margin: 12px 0;
-  border-radius: 8px;
-  font-size: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================
-ORDER FORM
-========================= */
-
-.order-form-section {
-  padding: 80px 20px;
-  background: #f6f7f8;
-}
-
-.order-form {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  max-width: 700px;
-  margin: auto;
-}
-
-.order-form input,
-.order-form textarea {
-  padding: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  transition: all 0.2s;
-}
-
-.order-form input:focus,
-.order-form textarea:focus {
-  outline: none;
-  border-color: #0f2c3a;
-  box-shadow: 0 0 0 2px rgba(15, 44, 58, 0.15);
-}
-
-/* =========================
-ORDER REASSURANCE
-========================= */
-
-.order-reassurance {
-  padding: 60px 20px;
-  background: white;
-  border-top: 1px solid #eee;
-  text-align: center;
-  font-size: 18px;
+.site-header nav a:hover{
+color:#d39b36;
 }

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hear the Shanties | The Shanty Shack</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16.png"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo-area">
+          <img src="assets/images/logo.jpg" alt="The Shanty Shack logo" />
+          <span>The Shanty Shack</span>
+        </div>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="examples.html">Hear the Shanties</a>
+          <a href="order.html">Order a Shanty</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="order-hero">
+      <div class="container">
+        <h1>Hear the Shanties</h1>
+
+        <p>
+          Every pet has a legend worth singing. Browse a few of the shanty
+          styles you can commission for your own four-legged sailor.
+        </p>
+      </div>
+    </section>
+
+    <!-- SHANTY GALLERY -->
+
+    <section class="shanty-gallery">
+      <div class="container">
+        <div class="shanty-grid">
+          <!-- 1 CAPSTAN -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img src="assets/images/capstan.jpg" alt="Capstan shanty style" />
+
+              <button class="play-btn" onclick="togglePlay('capstan')">
+                ▶
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3>Capstan Shanty — 112 BPM</h3>
+
+              <p>
+                Steady work-song rhythm with powerful harmony refrains and a
+                strong downbeat.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="capstan">
+              <source src="audio/capstan-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <!-- 2 FOREBITTER -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img
+                src="assets/images/forebitter.jpg"
+                alt="Forebitter ballad style"
+              />
+
+              <button class="play-btn" onclick="togglePlay('forebitter')">
+                ▶
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3>Forebitter Ballad — 75 BPM</h3>
+
+              <p>
+                A slower lyrical storytelling style with rich harmony and
+                emotional delivery.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="forebitter">
+              <source src="audio/forebitter-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <!-- 3 HALYARD -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img
+                src="assets/images/halyard.jpg"
+                alt="Halyard haul shanty style"
+              />
+
+              <button class="play-btn" onclick="togglePlay('halyard')">
+                ▶
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3>Halyard Haul — 112 BPM</h3>
+
+              <p>
+                Punchy call-and-response shanty with snappy rhythm and short
+                vocal phrases.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="halyard">
+              <source src="audio/halyard-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <!-- 4 MODERN ANTHEM -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img
+                src="assets/images/anthem.jpg"
+                alt="Modern sea anthem style"
+              />
+
+              <button class="play-btn" onclick="togglePlay('anthem')">▶</button>
+            </div>
+
+            <div class="card-content">
+              <h3>Modern Sea Anthem — 92 BPM</h3>
+
+              <p>
+                Traditional folk chords blended with a cinematic build and
+                powerful chorus.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="anthem">
+              <source src="audio/anthem-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <!-- 5 DOCKSIDE -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img
+                src="assets/images/dockside.jpg"
+                alt="Dockside drinking shanty"
+              />
+
+              <button class="play-btn" onclick="togglePlay('dockside')">
+                ▶
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3>Dockside Drinking Song — 124 BPM</h3>
+
+              <p>
+                A jaunty tavern singalong with stomping rhythm and rowdy group
+                vocals.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="dockside">
+              <source src="audio/dockside-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <!-- 6 SHANTY PUNK -->
+
+          <div class="shanty-card">
+            <div class="cover">
+              <img src="assets/images/shantypunk.jpg" alt="Shanty punk style" />
+
+              <button class="play-btn" onclick="togglePlay('punk')">▶</button>
+            </div>
+
+            <div class="card-content">
+              <h3>Shanty-Punk Crossover — 124 BPM</h3>
+
+              <p>
+                A high-energy fusion of traditional shanty vocals with modern
+                rock drive.
+              </p>
+
+              <a class="style-btn" href="order.html">Order this style</a>
+            </div>
+
+            <audio id="punk">
+              <source src="audio/punk-preview.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-reassurance">
+      <div class="container">
+        <p>Ready to hear your pet's legend sung across the seas?</p>
+
+        <a href="order.html" class="hero-button">
+          ⚓ Commission Your Pet's Shanty
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="assets/images/logo.jpg" alt="The Shanty Shack" />
+
+        <p>© The Shanty Shack</p>
+      </div>
+    </footer>
+
+    <script>
+      function togglePlay(id) {
+        const audio = document.getElementById(id);
+
+        document.querySelectorAll("audio").forEach((a) => {
+          if (a !== audio) {
+            a.pause();
+          }
+        });
+
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
