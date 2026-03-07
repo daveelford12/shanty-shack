@@ -14,6 +14,23 @@ body {
 HEADER
 ========================= */
 
+/* =========================
+LOGO AREA
+========================= */
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-area img {
+  height: 42px;
+  width: auto;
+}
+
 .site-header {
   background: #0b2530;
   color: #ffffff;
@@ -322,10 +339,128 @@ CALL TO ACTION
 FOOTER
 ========================= */
 
+.site-footer {
+  background: #0f2c3a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-inner img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
 footer {
   text-align: center;
   padding: 25px;
   background: #111;
   color: #aaa;
   font-size: 14px;
+}
+
+/* =========================
+ORDER PAGE HERO
+========================= */
+
+.order-hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("assets/images/hero-order.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  padding: 140px 20px;
+  color: white;
+}
+
+.order-hero h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.order-hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* =========================
+WHAT YOU RECEIVE
+========================= */
+
+.what-you-get {
+  padding: 80px 20px;
+  background: white;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.what-you-get ul {
+  list-style: none;
+  padding: 0;
+  max-width: 520px;
+  margin: 40px auto 0;
+}
+
+.what-you-get li {
+  background: #f7f7f7;
+  padding: 18px 22px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+ORDER FORM
+========================= */
+
+.order-form-section {
+  padding: 80px 20px;
+  background: #f6f7f8;
+}
+
+.order-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.order-form input,
+.order-form textarea {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+  outline: none;
+  border-color: #0f2c3a;
+  box-shadow: 0 0 0 2px rgba(15, 44, 58, 0.15);
+}
+
+/* =========================
+ORDER REASSURANCE
+========================= */
+
+.order-reassurance {
+  padding: 60px 20px;
+  background: white;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 18px;
 }
