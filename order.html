@@ -120,12 +120,11 @@
           class="order-form"
           action="https://formspree.io/f/maqpnwan"
           method="POST"
-          enctype="multipart/form-data"
         >
           <input type="hidden" name="_subject" value="New Shanty Order" />
           <input
             type="hidden"
-            name="_redirect"
+            name="_next"
             value="https://daveelford12.github.io/shanty-shack/thanks.html"
           />
 
@@ -265,20 +264,4 @@
   }
 
   setInterval(updateQueue, 6000);
-</script>
-<script>
-  const fileInput = document.querySelector('input[type="file"]');
-
-  fileInput.addEventListener("change", function () {
-    const file = this.files[0];
-
-    if (!file) return;
-
-    const maxSize = 5 * 1024 * 1024; // 5MB
-
-    if (file.size > maxSize) {
-      alert("Please upload an image smaller than 5MB.");
-      this.value = "";
-    }
-  });
 </script>
