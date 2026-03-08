@@ -120,6 +120,7 @@
           class="order-form"
           action="https://formspree.io/f/maqpnwan"
           method="POST"
+          id="orderForm"
         >
           <input type="hidden" name="_subject" value="New Shanty Order" />
           <input
@@ -214,6 +215,25 @@
     </footer>
   </body>
 </html>
+<script>
+  const form = document.getElementById("orderForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    window.location.href = "thanks.html";
+  });
+</script>
 
 <script>
   const queueMessages = [
