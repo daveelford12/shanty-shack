@@ -45,13 +45,14 @@
 
     <section class="order-hero">
       <div class="container">
-        <h1>Create Your Pet's Sea Shanty</h1>
-
-        <p>
-          Turn the adventures of your dog, cat, or feathered rogue into a custom
-          maritime song. Funny, heroic, or emotional — every pet has a story
-          worth singing.
-        </p>
+        <div class="hero-text">
+          <h1>Create Your Pet's Sea Shanty</h1>
+          <p>
+            Turn the adventures of your dog, cat, or feathered rogue into a
+            custom maritime song. Funny, heroic, or emotional — every pet has a
+            story worth singing.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -59,17 +60,53 @@
 
     <section class="what-you-get">
       <div class="container">
-        <h2>What You Receive</h2>
+        <div class="what-layout">
+          <div class="what-text">
+            <h2>What You Receive</h2>
+            <p>
+              Every custom shanty is written to celebrate your pet’s
+              personality, adventures, and legendary antics. The result is a
+              fully produced maritime song you’ll want to play again and again.
+            </p>
+          </div>
 
-        <ul>
-          <li>⚓ A fully produced custom sea shanty</li>
+          <div class="what-grid">
+            <div class="feature-card">
+              <div class="feature-icon">⚓</div>
+              <h3>Custom Sea Shanty</h3>
+              <p>A fully produced maritime song inspired by your pet.</p>
+            </div>
 
-          <li>⚓ Lyrics inspired by your pet's adventures</li>
+            <div class="feature-card">
+              <div class="feature-icon">✍️</div>
+              <h3>Story-Driven Lyrics</h3>
+              <p>Lyrics based on your pet's adventures.</p>
+            </div>
 
-          <li>⚓ A downloadable MP3 of your song</li>
+            <div class="feature-card">
+              <div class="feature-icon">⬇️</div>
+              <h3>Downloadable MP3</h3>
+              <p>High quality MP3 of your finished shanty.</p>
+            </div>
 
-          <li>⚓ Optional custom cover artwork featuring your pet</li>
-        </ul>
+            <div class="feature-card">
+              <div class="feature-icon">🖼️</div>
+              <h3>Optional Artwork</h3>
+              <p>Custom cover artwork featuring your pet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-queue">
+      <div class="container">
+        <div class="queue-ticker">
+          <span class="queue-icon">⚓</span>
+          <span id="queue-text"
+            >Now composing: Luna — Moonlight Deck Prowler</span
+          >
+        </div>
       </div>
     </section>
 
@@ -110,11 +147,39 @@
             placeholder="What adventures does your pet have? Funny habits? Personality?"
           ></textarea>
 
-          <label>Upload a photo of your pet</label>
-          <input type="file" name="petphoto" />
+          <label for="shanty-style">Choose Your Shanty Style</label>
+          <small>Hear examples on the Listen to the Shanties page.</small>
 
-          <label>Upload extra photos (optional)</label>
-          <input type="file" name="petphoto2" />
+          <select id="shanty-style" name="Shanty Style" required>
+            <option value="">Select a style</option>
+
+            <option>Capstan Shanty — steady work-song rhythm</option>
+
+            <option>Forebitter Ballad — slower storytelling ballad</option>
+
+            <option>Halyard Haul — punchy call and response</option>
+
+            <option>Modern Sea Anthem — cinematic folk build</option>
+
+            <option>Stormbound Jig — lively 6/8 dance feel</option>
+
+            <option>Dockside Drinking Song — jaunty tavern singalong</option>
+          </select>
+
+          <h3>Send Your Pet Photo</h3>
+          <input
+            type="url"
+            id="photo-link"
+            name="Pet Photo Link"
+            placeholder="Paste a Google Drive, iCloud, Dropbox or similar photo link"
+            required
+          />
+
+          <small class="upload-note">
+            Upload your pet photo to Google Drive, iCloud, Dropbox, or another
+            cloud service and paste the share link here. Please use the
+            highest-quality image you have.
+          </small>
 
           <button type="submit" class="hero-button">
             ⚓ Commission Your Pet's Shanty
@@ -145,3 +210,70 @@
     </footer>
   </body>
 </html>
+
+<script>
+  const queueMessages = [
+    "Mixing vocals for: Archie — Captain of the Hutch",
+    "New shanty request arrived for Daisy the Dockside Dog",
+    "Preparing sea anthem for Biscuit the Brave Labrador",
+    "New order arrived from Bristol for Charlie the Collie",
+    "Fresh shanty request from Liverpool for Bella the Cat",
+    "Song request just in from York for Toby the Terrier",
+    "New pet legend submitted from Brighton",
+    "Now composing: Pickle — The Pirate Parrot",
+    "New order received: Alfie — The Biscuit Bandit",
+    "Lyrics underway for: Luna Belle — Queen of the Garden",
+    "Mixing vocals for: Captain Paws — Terror of the Tug Toy",
+    "New shanty request arrived for Marley — The Dockside Dog",
+    "Preparing sea anthem for Percy — Lord of the Windowsill",
+    "Now composing: Rosie — The Seaside Spaniel",
+    "New order received: Fergus — Guardian of the Garden Gate",
+    "Lyrics underway for: Otto — Admiral of the Fish Tank",
+    "Mixing vocals for: Molly — The Midnight Mischief Maker",
+    "New shanty request arrived for Winston — The Sofa Commander",
+    "Preparing sea anthem for Daisy Mae — Belle of the Backyard",
+    "Now composing: Jasper — Captain of the Kitchen Floor",
+    "New order received: Teddy — The Biscuit Raider",
+    "Lyrics underway for: Olive — The Harbour Cat",
+    "Mixing vocals for: Rufus — The Rowdy Retriever",
+    "New shanty request arrived for Bonnie — Queen of the Kennel",
+    "Preparing sea anthem for Pepper — The Parlor Prowler",
+    "Now composing: Barney — The Brave Little Beagle",
+    "New order received: Skipper — The Harbour Hound",
+  ];
+
+  let index = 0;
+
+  function updateQueue() {
+    const text = document.getElementById("queue-text");
+
+    text.style.opacity = 0;
+    text.style.transform = "translateY(10px)";
+
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * queueMessages.length);
+      text.textContent = queueMessages[randomIndex];
+
+      text.style.opacity = 1;
+      text.style.transform = "translateY(0)";
+    }, 400);
+  }
+
+  setInterval(updateQueue, 6000);
+</script>
+<script>
+  const fileInput = document.querySelector('input[type="file"]');
+
+  fileInput.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const maxSize = 5 * 1024 * 1024; // 5MB
+
+    if (file.size > maxSize) {
+      alert("Please upload an image smaller than 5MB.");
+      this.value = "";
+    }
+  });
+</script>
