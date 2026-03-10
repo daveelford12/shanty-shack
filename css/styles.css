@@ -341,7 +341,7 @@ ORDER PAGE
 .order-hero {
   position: relative;
 
-  background-image: url("../assets/images/hero2.jpg");
+  background-image: url("../assets/images/hero4-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -728,7 +728,7 @@ ABOUT PAGE
 
 .about-hero-main {
   position: relative;
-  background-image: url("../assets/images/hero2.jpg");
+  background-image: url("../assets/images/about-page-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
