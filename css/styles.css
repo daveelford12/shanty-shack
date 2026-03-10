@@ -169,7 +169,7 @@ HOW IT WORKS
 .how {
   padding: 90px 20px;
   text-align: center;
-  background: #f6f8fb;
+  background: #9a6924;
 }
 
 .how h2 {
@@ -190,7 +190,7 @@ HOW IT WORKS
 /* step cards */
 
 .step {
-  background: white;
+  background: rgba(250, 249, 248, 0.35);
   padding: 40px 28px;
   border-radius: 12px;
 
