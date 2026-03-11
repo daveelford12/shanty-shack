@@ -1134,3 +1134,11 @@ FOOTER
   font-size: 14px;
   opacity: 0.8;
 }
+.footer-links a {
+  color: #e6c27a;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
