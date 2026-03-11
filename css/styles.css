@@ -603,6 +603,44 @@ LIVE ORDER QUEUE
   background: #d39b36;
   transform: translateY(-2px);
 }
+
+.payment-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: url("../assets/images/soft-ocean-waves.jpg") center/cover
+    no-repeat;
+}
+
+.payment-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.payment-hero .container {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  max-width: 650px;
+}
+
+.payment-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+.payment-hero p {
+  font-size: 1.2rem;
+}
+
 /* =========================
 SHANTY GALLERY
 ========================= */
