@@ -1110,11 +1110,17 @@ ABOUT PAGE
 FOOTER
 ========================= */
 
-.site-footer {
-  background: #0f2c3a;
-  color: white;
-  padding: 40px 20px;
-  margin-top: 80px;
+.site-footer a {
+  color: #e6c27a;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer a:visited {
+  color: #e6c27a;
 }
 
 .footer-inner {
