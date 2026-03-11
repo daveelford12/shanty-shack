@@ -4,116 +4,221 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>The Shanty Shack</title>
+    <title>The Shanty Shack | Custom Sea Shanties for Pets</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Libre+Baskerville&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Order a custom sea shanty about your pet. The Sailor’s Refrain create personalised maritime songs inspired by your dog, cat or companion."
     />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-          url("assets/images/hero-pet-captain2.jpg");
+    <!-- Open Graph (social preview) -->
+    <meta property="og:title" content="The Shanty Shack" />
+    <meta
+      property="og:description"
+      content="Custom sea shanties written about your pet."
+    />
+    <meta
+      property="og:image"
+      content="https://www.theshantyshack.com/assets/images/hero-pet-captain2.jpg"
+    />
+    <meta property="og:url" content="https://www.theshantyshack.com" />
+    <meta property="og:type" content="website" />
 
-        background-size: cover;
-        background-position: center;
+    <!-- Twitter preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Shanty Shack" />
+    <meta
+      name="twitter:description"
+      content="Custom sea shanties written about your pet."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.theshantyshack.com/assets/images/shanty-hero.jpg"
+    />
 
-        font-family: "Libre Baskerville", serif;
-      }
-
-      /* central panel */
-
-      .panel {
-        background: rgba(10, 15, 20, 0.75);
-        padding: 60px 70px;
-        border-radius: 8px;
-
-        text-align: center;
-
-        backdrop-filter: blur(4px);
-
-        box-shadow:
-          0 0 60px rgba(0, 0, 0, 0.9),
-          0 0 30px rgba(255, 190, 90, 0.15);
-
-        max-width: 650px;
-      }
-
-      /* title */
-
-      h1 {
-        font-family: "Cinzel", serif;
-        font-size: 52px;
-        letter-spacing: 3px;
-
-        color: #f7e2b3;
-
-        text-shadow:
-          0 0 8px rgba(255, 200, 120, 0.4),
-          0 0 25px rgba(255, 170, 60, 0.25);
-
-        margin-bottom: 20px;
-      }
-
-      /* subtitle text */
-
-      p {
-        font-size: 20px;
-        color: #e7e7e7;
-
-        line-height: 1.6;
-      }
-
-      /* divider rope style */
-
-      .divider {
-        width: 120px;
-        height: 2px;
-
-        background: #c9a86a;
-
-        margin: 30px auto;
-
-        opacity: 0.6;
-      }
-
-      /* small footer */
-
-      .footer {
-        margin-top: 25px;
-        font-size: 14px;
-        color: #cfcfcf;
-        opacity: 0.7;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <div class="panel">
-      <h1>The Shanty Shack</h1>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo-area">
+          <img src="assets/images/logo.jpg" alt="The Shanty Shack logo" />
+          <span>The Shanty Shack</span>
+        </div>
 
-      <div class="divider"></div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="examples.html">Hear the Shanties</a>
+          <a href="order.html">Order a Shanty</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
 
-      <p>
-        Custom sea shanties forged on the high seas.<br /><br />
-        The tavern doors open soon.<br />
-        Drop anchor and return shortly.
-      </p>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Every Legendary Pet Deserves a Sea Shanty</h2>
 
-      <div class="footer">⚓ www.theshantyshack.com ⚓</div>
-    </div>
+          <p>
+            Turn the adventures of your dog, cat, or feathered rogue into a
+            custom maritime song. Funny, heroic, or emotional — every pet has a
+            story worth singing.
+          </p>
+
+          <a href="order.html" class="hero-button">
+            ⚓ Order Your Pet's Shanty
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="queue-status">
+      <p>⚓ 3 shanties currently being forged in the Shack</p>
+    </section>
+
+    <section class="how">
+      <div class="container">
+        <h2>How It Works</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">⚓</div>
+            <h3>Tell Us About Your Pet</h3>
+            <p>Share their name, personality, and adventures.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">🎶</div>
+            <h3>We Craft the Shanty</h3>
+            <p>A custom sea shanty inspired by their story.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">📜</div>
+            <h3>Receive Your Song</h3>
+            <p>Your unique shanty, lyrics, and artwork delivered.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="examples">
+      <h2>Featured Shanties</h2>
+
+      <div class="examples-grid">
+        <!-- SHANTY 1 -->
+
+        <div class="example-card">
+          <div class="album-cover">
+            <img
+              src="assets/images/bella.jpg"
+              alt="Bella the Bedlington Buccaneer"
+            />
+            <div class="play-overlay">▶</div>
+          </div>
+
+          <h3>Bella — The Bedlington Buccaneer</h3>
+
+          <p>The terror of the biscuit tin and captain of the kitchen fleet.</p>
+
+          <audio controls>
+            <source
+              src="assets/audio/bella-bedlington-buccaneer.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </div>
+
+        <!-- SHANTY 2 -->
+
+        <div class="example-card">
+          <div class="album-cover">
+            <img
+              src="assets/images/monty-admiral.jpg"
+              alt="Monty the Sofa Sailor"
+            />
+            <div class="play-overlay">▶</div>
+          </div>
+
+          <h3>Monty — The Sofa Sailor</h3>
+
+          <p>Master of naps and commander of the living room fleet.</p>
+
+          <audio controls>
+            <source src="assets/audio/monty-admiral.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+
+        <!-- SHANTY 3 -->
+
+        <div class="example-card">
+          <div class="album-cover">
+            <img
+              src="assets/images/whiskers-tuna-tin.jpg"
+              alt="Captain Whiskers"
+            />
+            <div class="play-overlay">▶</div>
+          </div>
+
+          <h3>Captain Whiskers</h3>
+
+          <p>Scourge of the tuna tins and ruler of the midnight galley.</p>
+
+          <audio controls>
+            <source src="assets/audio/whiskers-shanty.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </section>
+    <section class="recent">
+      <h2>Recently Created Shanties</h2>
+
+      <div class="recent-grid">
+        <div class="recent-card">
+          <img src="assets/images/bella.jpg" alt="Bella" />
+          <p><strong>Bella</strong><br />Bedlington Buccaneer</p>
+        </div>
+
+        <div class="recent-card">
+          <img src="assets/images/monty-admiral.jpg" alt="Monty" />
+          <p><strong>Monty</strong><br />Admiral of the Sofa Fleet</p>
+        </div>
+
+        <div class="recent-card">
+          <img src="assets/images/whiskers-tuna-tin.jpg" alt="Whiskers" />
+          <p><strong>Captain Whiskers</strong><br />Terror of the Tuna Tin</p>
+        </div>
+
+        <div class="recent-card">
+          <img src="assets/images/luna.jpg" alt="Luna" />
+          <p><strong>Luna</strong><br />Moonlight Deck Prowler</p>
+        </div>
+
+        <div class="recent-card">
+          <img src="assets/images/archie.jpg" alt="Archie" />
+          <p><strong>Archie</strong><br />Captain of the Backyard Fleet</p>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <h2>Your Pet’s Legend Awaits</h2>
+
+      <p>Celebrate your pet with a custom sea shanty they’ll never forget.</p>
+
+      <a href="order.html" class="hero-button">Create a Shanty</a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="assets/images/logo.jpg" alt="The Shanty Shack logo" />
+
+        <p>© The Shanty Shack</p>
+      </div>
+    </footer>
   </body>
 </html>
