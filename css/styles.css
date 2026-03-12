@@ -501,6 +501,17 @@ ORDER PAGE
   color: #555;
 }
 
+.price-card {
+  border: 2px solid #d4af37;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.price-card .price-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 10px 0 8px;
+  color: #1f1f1f;
+}
 /* =========================
 LIVE ORDER QUEUE
 ========================= */
@@ -1120,7 +1131,7 @@ FOOTER
 }
 
 .site-footer a:visited {
-  color: #e6c27a;
+  color: #0f0f0f;
 }
 
 .footer-inner {
@@ -1141,7 +1152,7 @@ FOOTER
   opacity: 0.8;
 }
 .footer-links a {
-  color: #e6c27a;
+  color: #462ba8;
   text-decoration: none;
 }
 
